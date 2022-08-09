@@ -1,6 +1,7 @@
 import React from 'react';
 import { PageWidthContainer } from '../PageWidthContainer';
 import FooterMenuGrid from './FooterMenuGrid';
+import AccordionMenu from './AccordionMenu';
 
 const FooterContent = () => {
     return (
@@ -8,6 +9,7 @@ const FooterContent = () => {
             sx={{ backgroundColor: 'secondary.light', paddingTop: 8 }}
         >
             <FooterMenuGrid />
+            <AccordionMenu />
         </PageWidthContainer>
     );
 };

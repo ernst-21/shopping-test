@@ -2,8 +2,8 @@ import * as React from 'react';
 import { useState, memo } from 'react';
 import Menu from '@mui/material/Menu';
 import Fade from '@mui/material/Fade';
-import { Box, ListItem, Typography } from '@mui/material';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { Box, List, ListItem, Typography } from '@mui/material';
+import { MdExpandMore } from 'react-icons/md';
 
 type SelectedItemProps = {
     selectedItem: any;
@@ -55,7 +55,7 @@ const FooterSelect = ({ itemsList, label, sx }: FooterSelectProps) => {
                     }}
                     onClick={handleClick}
                 >
-                    <ArrowDropDownIcon color="primary" />
+                    <MdExpandMore color="primary" />
                 </div>
             </Box>
 
@@ -78,18 +78,23 @@ const FooterSelect = ({ itemsList, label, sx }: FooterSelectProps) => {
                 onClose={handleClose}
                 TransitionComponent={Fade}
             >
-                {itemsList.map((item: string) => (
-                    <ListItem
-                        key={item}
-                        sx={{
-                            cursor: 'pointer',
-                            '&:hover': { backgroundColor: 'secondary.light' },
-                        }}
-                        onClick={() => setSelectedItem(item)}
-                    >
-                        {item}
-                    </ListItem>
-                ))}
+                <List>
+                    {itemsList.map((item: string) => (
+                        <ListItem
+                            key={item}
+                            sx={{
+                                cursor: 'pointer',
+                                border: 'none',
+                                '&:hover': {
+                                    backgroundColor: 'secondary.light',
+                                },
+                            }}
+                            onClick={() => setSelectedItem(item)}
+                        >
+                            {item}
+                        </ListItem>
+                    ))}
+                </List>
             </Menu>
         </Box>
     );

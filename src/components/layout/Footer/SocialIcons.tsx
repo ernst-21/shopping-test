@@ -8,10 +8,26 @@ const SocialIcons = () => {
             {socialIcons.map((item: any, index: number) => {
                 const Icon = item.icon;
                 return (
-                    <Icon
-                        sx={{ fontSize: 28, color: '#535C67', mr: 1 }}
+                    <Box
                         key={index}
-                    />
+                        sx={{
+                            backgroundColor: '#535C67',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            width: '30px',
+                            height: '30px',
+                            borderRadius: 99,
+                            mr: 1,
+                        }}
+                    >
+                        <Icon
+                            style={{
+                                fontSize: '18px',
+                                color: '#fff',
+                            }}
+                        />
+                    </Box>
                 );
             })}
         </Box>

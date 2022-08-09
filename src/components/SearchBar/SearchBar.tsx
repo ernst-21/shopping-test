@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchIcon from '@mui/icons-material/Search';
+import { MdOutlineSearch } from 'react-icons/md';
 import { InputAdornment, TextField } from '@mui/material';
 
 const SearchBar = () => {
@@ -19,7 +19,9 @@ const SearchBar = () => {
             InputProps={{
                 startAdornment: (
                     <InputAdornment position="start">
-                        <SearchIcon sx={{ fontSize: 24, color: '#001342' }} />
+                        <MdOutlineSearch
+                            style={{ fontSize: 24, color: '#001342' }}
+                        />
                     </InputAdornment>
                 ),
             }}
