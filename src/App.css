@@ -1,7 +1,18 @@
 html {
-  font-size: 10px;
+  font-size: 16px;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.page-wrapper {
+  margin: 0 auto;
+  padding: 0 8px;
+  max-width: 1845px;
+  width: 100%;
+}
+
+.appBarIcon {
+  stroke-width: 4rem;
 }
