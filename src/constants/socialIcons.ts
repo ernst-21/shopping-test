@@ -1,18 +1,24 @@
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import {
+    FaFacebookF,
+    FaTwitter,
+    FaInstagram,
+    FaLinkedinIn,
+    FaYoutube,
+} from 'react-icons/fa';
 export const socialIcons = [
     {
-        icon: FacebookRoundedIcon,
+        icon: FaFacebookF,
     },
     {
-        icon: FacebookRoundedIcon,
+        icon: FaTwitter,
     },
     {
-        icon: FacebookRoundedIcon,
+        icon: FaInstagram,
     },
     {
-        icon: FacebookRoundedIcon,
+        icon: FaLinkedinIn,
     },
     {
-        icon: FacebookRoundedIcon,
+        icon: FaYoutube,
     },
 ];
