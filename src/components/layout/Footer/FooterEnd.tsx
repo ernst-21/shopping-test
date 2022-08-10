@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageWidthContainer } from '../PageWidthContainer';
 import { Box, Typography } from '@mui/material';
-import FooterSelect from './FooterSelect';
+import { ItemsSelect } from '../../ItemsSelect';
 
 const year = new Date().getFullYear();
 const REGIONS = ['United States', 'Europe'];
@@ -36,12 +36,12 @@ const FooterEnd = () => {
                         flexDirection: { xs: 'column', md: 'row' },
                     }}
                 >
-                    <FooterSelect
+                    <ItemsSelect
                         label={'Region'}
                         itemsList={REGIONS}
                         sx={{ mr: 2 }}
                     />
-                    <FooterSelect label={'Language'} itemsList={LANGUAGES} />
+                    <ItemsSelect label={'Language'} itemsList={LANGUAGES} />
                 </Box>
             </Box>
         </PageWidthContainer>

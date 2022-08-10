@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, memo } from 'react';
+import { useState, memo, useCallback } from 'react';
 import Menu from '@mui/material/Menu';
 import Fade from '@mui/material/Fade';
 import { Box, List, ListItem, Typography } from '@mui/material';
@@ -21,15 +21,25 @@ const SelectedItem = ({ selectedItem, label }: SelectedItemProps) => {
     );
 };
 
-type FooterSelectProps = {
+type ItemsSelectProps = {
     itemsList: any[];
     label: string;
     sx?: {};
+    callback?: (item: any) => void;
+    selected?: any;
 };
 
-const FooterSelect = ({ itemsList, label, sx }: FooterSelectProps) => {
+const ItemsSelect = ({
+    itemsList,
+    label,
+    sx,
+    callback,
+    selected,
+}: ItemsSelectProps) => {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-    const [selectedItem, setSelectedItem] = useState(itemsList[0]);
+    const [selectedItem, setSelectedItem] = useState(
+        selected ? selected : itemsList[0]
+    );
     const open = Boolean(anchorEl);
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -39,13 +49,19 @@ const FooterSelect = ({ itemsList, label, sx }: FooterSelectProps) => {
         setAnchorEl(null);
     };
 
+    const handleSelect = useCallback(
+        (item) => {
+            setSelectedItem(item);
+            if (callback) {
+                callback(item);
+            }
+        },
+        [callback]
+    );
+
     return (
         <Box sx={{ ...sx }}>
-            <Box
-                display={'flex'}
-                justifyContent={'flex-end'}
-                alignItems={'center'}
-            >
+            <Box display={'flex'} alignItems={'center'}>
                 <SelectedItem label={label} selectedItem={selectedItem} />
                 <div
                     style={{
@@ -89,7 +105,7 @@ const FooterSelect = ({ itemsList, label, sx }: FooterSelectProps) => {
                                     backgroundColor: 'secondary.light',
                                 },
                             }}
-                            onClick={() => setSelectedItem(item)}
+                            onClick={() => handleSelect(item)}
                         >
                             {item}
                         </ListItem>
@@ -100,4 +116,4 @@ const FooterSelect = ({ itemsList, label, sx }: FooterSelectProps) => {
     );
 };
 
-export default memo(FooterSelect);
+export default memo(ItemsSelect);

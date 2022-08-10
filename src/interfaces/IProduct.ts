@@ -1,15 +1,16 @@
 export interface IProduct {
+    _id: string;
     description: string;
     images: string[];
     inStock: number;
     price: number;
-    sizes: ValidSizes[];
+    sizes: ISize[];
     slug: string;
     tags: string[];
     title: string;
-    type: ValidTypes;
+    type: IType;
     gender: 'men' | 'women' | 'kid' | 'unisex';
 }
 
-type ValidSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL';
-type ValidTypes = 'shirts' | 'pants' | 'hoodies' | 'hats';
+export type ISize = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL';
+export type IType = 'shirts' | 'pants' | 'hoodies' | 'hats';

@@ -1,16 +1,15 @@
 import React from 'react';
-import { Stack, Typography } from '@mui/material';
+import { Stack } from '@mui/material';
 import { ProductList } from '../../components/ProductList';
 import { products } from '../../../../mockData/mockData';
+import { SectionTitle } from '../../../../components/SectionTitle';
 
 const MIGHT_LIKE_PRODUCTS = products.slice(4);
 
 const MightLikeContainer = () => {
     return (
-        <Stack sx={{ my: 12 }}>
-            <Typography sx={{ mb: 2, fontSize: 24, fontWeight: 700 }}>
-                You might also like
-            </Typography>
+        <Stack sx={{ marginY: 6 }}>
+            <SectionTitle title={'You might also like'} />
             <ProductList products={MIGHT_LIKE_PRODUCTS} />
         </Stack>
     );
