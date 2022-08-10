@@ -29,6 +29,7 @@ const CartListInfo = ({ product }: CartListItemProps) => {
                         fontSize: '18px',
                         fontWeight: 700,
                         color: 'primary.dark',
+                        lineHeight: 1,
                     }}
                 >
                     {product.title}

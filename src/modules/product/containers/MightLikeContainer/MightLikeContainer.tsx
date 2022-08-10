@@ -8,7 +8,7 @@ const MIGHT_LIKE_PRODUCTS = products.slice(4);
 
 const MightLikeContainer = () => {
     return (
-        <Stack sx={{ marginY: 6 }}>
+        <Stack sx={{ mt: 6, mb: '120px' }}>
             <SectionTitle title={'You might also like'} />
             <ProductList products={MIGHT_LIKE_PRODUCTS} />
         </Stack>

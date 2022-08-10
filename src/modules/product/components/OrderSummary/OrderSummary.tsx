@@ -14,7 +14,7 @@ const OrderSummary = () => {
 
     return (
         <Grid
-            sx={{ paddingLeft: { md: 4 }, mt: { xs: 2, md: 0 } }}
+            sx={{ paddingLeft: { md: 4 }, mt: { xs: 2, md: 1 } }}
             item
             xs={12}
             md={3}
