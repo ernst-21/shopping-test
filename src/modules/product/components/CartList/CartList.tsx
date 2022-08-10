@@ -14,7 +14,7 @@ const CartList = () => {
     }
 
     return (
-        <Grid item xs={12} md={9}>
+        <Grid item xs={12} lg={9}>
             <Box sx={{ display: 'flex', alignItems: ' center' }}>
                 <SectionTitle title={'Your cart'} />
                 <Typography

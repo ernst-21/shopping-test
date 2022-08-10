@@ -24,8 +24,10 @@ const CartListEmpty = () => {
                 sx={{
                     display: 'flex',
                     alignItems: 'center',
+                    textAlign: 'center',
                     justifyContent: 'center',
                     flexDirection: 'column',
+                    paddingX: 2,
                 }}
             >
                 <Card>

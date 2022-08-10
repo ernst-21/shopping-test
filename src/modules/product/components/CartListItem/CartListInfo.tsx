@@ -48,7 +48,7 @@ const CartListInfo = ({ product }: CartListItemProps) => {
                         cursor: 'pointer',
                     }}
                 >
-                    <RiDeleteBinLine />
+                    <RiDeleteBinLine style={{ fontSize: 18 }} />
                     <Typography
                         sx={{ ml: 1, fontSize: '12px', fontWeight: 600 }}
                     >

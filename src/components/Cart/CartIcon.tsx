@@ -20,7 +20,15 @@ const CartIcon = () => {
                     {numberOfItems}
                 </Box>
             </Box>
-            <Typography sx={{ ml: 1, fontSize: '15px' }}>Cart</Typography>
+            <Typography
+                sx={{
+                    ml: 1,
+                    fontSize: '15px',
+                    display: { xs: 'none', lg: 'block' },
+                }}
+            >
+                Cart
+            </Typography>
         </Box>
     );
 };

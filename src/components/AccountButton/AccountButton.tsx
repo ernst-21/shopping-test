@@ -12,7 +12,11 @@ const AccountButton = () => {
                     marginRight: 1,
                 }}
             />
-            <Typography sx={{ fontSize: '15px' }}>Sign in</Typography>
+            <Typography
+                sx={{ fontSize: '15px', display: { xs: 'none', lg: 'block' } }}
+            >
+                Sign in
+            </Typography>
         </Box>
     );
 };

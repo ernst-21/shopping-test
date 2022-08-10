@@ -14,10 +14,14 @@ const OrderSummary = () => {
 
     return (
         <Grid
-            sx={{ paddingLeft: { md: 4 }, mt: { xs: 2, md: 1 } }}
+            sx={{
+                padding: { xs: '0 20px', lg: '0 0 0 32px' },
+                mt: { xs: 2, md: 1 },
+            }}
             item
             xs={12}
-            md={3}
+            sm={6}
+            lg={3}
         >
             <SectionTitle title={'Order Summary'} />
             <Stack spacing={2}>
