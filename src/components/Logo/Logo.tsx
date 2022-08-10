@@ -1,12 +1,13 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import { SxProps } from '../../types';
 
-const Logo = () => {
+const Logo = ({ sx }: SxProps) => {
     return (
         <Box
             sx={{
-                display: { xs: 'none', md: 'flex' },
-                width: { xs: 'fit-content', md: '172px' },
+                ...sx,
+                width: { xs: '100%', md: '172px' },
                 justifyContent: 'center',
                 height: '48px',
                 backgroundColor: '#CED0D3',

@@ -2,12 +2,13 @@ import React, { useContext } from 'react';
 import { Box, Typography } from '@mui/material';
 import { BsHandbag } from 'react-icons/all';
 import { CartContext } from '../../context/cart';
+import { SxProps } from '../../types';
 
-const CartIcon = () => {
+const CartIcon = ({ sx }: SxProps) => {
     const { numberOfItems } = useContext(CartContext);
     return (
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <Box sx={{ ml: 2, mt: 0.5, position: 'relative' }}>
+            <Box sx={{ mt: 0.5, position: 'relative' }}>
                 <BsHandbag className="appBarIcon" style={{ fontSize: 36 }} />
                 <Box
                     style={{
@@ -22,9 +23,9 @@ const CartIcon = () => {
             </Box>
             <Typography
                 sx={{
-                    ml: 1,
+                    ...sx,
                     fontSize: '15px',
-                    display: { xs: 'none', lg: 'block' },
+                    ml: 1,
                 }}
             >
                 Cart

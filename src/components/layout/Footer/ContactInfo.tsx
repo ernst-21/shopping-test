@@ -11,7 +11,7 @@ const ContactInfo = () => {
                 spacing={3}
                 sx={{ alignItems: { xs: 'center', md: 'start' } }}
             >
-                <Logo />
+                <Logo sx={{ display: { xs: 'none', md: 'flex' } }} />
                 <Box>
                     <Typography
                         sx={{ fontSize: '15px', color: 'text.secondary' }}

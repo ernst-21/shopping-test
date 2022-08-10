@@ -9,7 +9,11 @@ import { AccountButton } from '../../AccountButton';
 import { CartIcon } from '../../Cart';
 import { PageWidthContainer } from '../PageWidthContainer';
 
-const Navbar = () => {
+type NavbarProps = {
+    onOpen: () => void;
+};
+
+const Navbar = ({ onOpen }: NavbarProps) => {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="sticky">
@@ -24,8 +28,8 @@ const Navbar = () => {
                             paddingX: '0px !important',
                         }}
                     >
-                        <Logo />
-                        <MenuIconBtn />
+                        <Logo sx={{ display: { xs: 'none', md: 'flex' } }} />
+                        <MenuIconBtn onClick={onOpen} />
                         <SearchBar />
                         <Box sx={{ flexGrow: 1 }} />
                         <Box
@@ -37,8 +41,18 @@ const Navbar = () => {
                                 },
                             }}
                         >
-                            <AccountButton />
-                            <CartIcon />
+                            <AccountButton
+                                sx={{
+                                    display: { xs: 'none', lg: 'block' },
+                                    ml: 1,
+                                }}
+                            />
+                            <CartIcon
+                                sx={{
+                                    display: { xs: 'none', lg: 'block' },
+                                    ml: 1,
+                                }}
+                            />
                         </Box>
                     </Toolbar>
                 </PageWidthContainer>
