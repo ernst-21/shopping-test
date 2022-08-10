@@ -7,7 +7,10 @@ import SocialIcons from './SocialIcons';
 const ContactInfo = () => {
     return (
         <Grid item md={2}>
-            <Stack spacing={3}>
+            <Stack
+                spacing={3}
+                sx={{ alignItems: { xs: 'center', md: 'start' } }}
+            >
                 <Logo />
                 <Box>
                     <Typography
