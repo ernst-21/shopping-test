@@ -16,7 +16,13 @@ Create CSR App with React/TypeScript for the following Design: https://www.figma
 
 - You have 1 week to complete this challenge
 
+# Add node modules
 
+- Run ```yarn install``` in the root folder
+
+# Start the project
+
+- Run ```yarn start``` in the root folder
 
 # Submit Results
 - Send public github repo url.
